@@ -2,3 +2,6 @@
 .hwp
 .pptx
 .doc
+
+#except folder list
+workspace/.metadata
