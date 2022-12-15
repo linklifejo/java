@@ -46,6 +46,7 @@ public class Ex77_BufferedRWMain {
 		try {
 			in = new BufferedReader(new FileReader(filename));
 			int data;
+			in.
 //			data = (char)in.read();
 //			System.out.println(data + " ");
 			while((data = in.read()) != -1) {

@@ -1,0 +1,2 @@
+홍길동,남,010-1111-1111,hanul1@naver.com
+심청,여,010-1111-2222,hanul2@naver.com
