@@ -5,7 +5,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class JDBC03_Update {
+public class JDBC05_Delete {
+	interface N {
+		int emp_id = 1;
+	}
+	
 	public static void main(String[] args) {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -16,16 +20,17 @@ public class JDBC03_Update {
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		try {
 			conn = DriverManager.getConnection(url, "hr", "0000");
-			String sql = "update employees set " + "salary=?,last_name=?" + "where employee_id=?";
+			String sql = "delete employees where employee_id=?";
 
 			ps = conn.prepareStatement(sql);
-			ps.setInt(1, 26000);
-			ps.setString(2, "King");
-			ps.setInt(3, 100);
+			
+			int emp_id=700;
+			ps.setInt(N.emp_id, emp_id);
 			int result = ps.executeUpdate();
 			if (result > 0) {
 				System.out.println("suss");
 			}
+
 		} catch (Exception e) {
 			// TODO: handle exception
 		} finally {
@@ -38,5 +43,4 @@ public class JDBC03_Update {
 			}
 		}
 	}
-
 }

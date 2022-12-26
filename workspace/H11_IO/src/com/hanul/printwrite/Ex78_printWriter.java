@@ -3,7 +3,7 @@ package com.hanul.printwrite;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
-public class Ex78_PrintWriter {
+public class Ex78_printWriter {
 
 	public static void main(String[] args) {
 		// 다양한 타입의 출력에 특화된 문자 스트림 클래스로 자동 flush() 기능을 제공
